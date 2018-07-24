@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bitflag
+Version: 0.0.1
+Summary: A bit flag class for python
+Home-page: https://github.com/clarketm/bitflag
+Author: Travis Clarke
+Author-email: travis.m.clarke@gmail.com
+License: UNKNOWN
+Description: # BitFlag
+        
+        A bit flag class for python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

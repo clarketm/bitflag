@@ -1,0 +1,9 @@
+README.md
+setup.py
+bitflag/BitFlag.py
+bitflag/TestBitFlag.py
+bitflag/__init__.py
+bitflag.egg-info/PKG-INFO
+bitflag.egg-info/SOURCES.txt
+bitflag.egg-info/dependency_links.txt
+bitflag.egg-info/top_level.txt
