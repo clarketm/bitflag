@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.0.1",
     author="Travis Clarke",
     author_email="travis.m.clarke@gmail.com",
-    description="A simple bit flag class",
+    description="A bit flag class for python",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/clarketm/bitflag",

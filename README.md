@@ -1,3 +1,3 @@
 # BitFlag
 
-A simple bitflag class
+A bit flag class for python
