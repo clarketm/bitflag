@@ -1,3 +1,3 @@
-# Python Project Skeleton
+# BitFlag
 
-![Tree](tree.png)
+A simple bitflag class
