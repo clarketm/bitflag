@@ -1,16 +1,14 @@
 # [BitFlag](https://pypi.org/project/bitflag/)
 
-A bit flag class for python.
+[![PyPi release](https://img.shields.io/pypi/v/bitflag.svg)](https://pypi.org/project/bitflag/)
 
-<br>
+A simple bit flag class for Python 🐍.
 
 ## Installation
 
 ```bash
 $ pip install bitflag
 ```
-
-<br>
 
 ## Usage
 
@@ -43,8 +41,6 @@ bf.reset()
 bf.flip()
 
 ```
-
-<br>
 
 ## License
 
