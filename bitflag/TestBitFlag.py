@@ -1,12 +1,11 @@
 """BitFlag module"""
 
 import unittest
-
 from bitflag.BitFlag import BitFlag
 
 
 class TestBitFlag(unittest.TestCase):
-    """Calculator class tests."""
+    """BitFlag class tests."""
 
     @classmethod
     def setUp(cls):
@@ -24,24 +23,24 @@ class TestBitFlag(unittest.TestCase):
         self.assertEqual(TestBitFlag.f.has("a"), True)
 
     def test_unset_should_turn_off_bit_flag(self):
-        """Test "set" should turn on bit flag."""
+        """Test "unset" should turn off bit flag."""
         TestBitFlag.f.unset("a")
         self.assertEqual(TestBitFlag.f.has("a"), False)
 
     def test_toggle_should_turn_off_bit_flag_if_currently_on(self):
-        """Test "set" should turn on bit flag."""
+        """Test "toggle" should turn off bit flag if currently on."""
         TestBitFlag.f.set("b")
         TestBitFlag.f.toggle("b")
         self.assertEqual(TestBitFlag.f.has("b"), False)
 
     def test_toggle_should_turn_on_bit_flag_if_currently_off(self):
-        """Test "set" should turn on bit flag."""
+        """Test "toggle" should turn on bit flag if currently off."""
         TestBitFlag.f.unset("c")
         TestBitFlag.f.toggle("c")
         self.assertEqual(TestBitFlag.f.has("c"), True)
 
     def test_reset_should_turn_off_all_bit_flags(self):
-        """Test "set" should turn on bit flag."""
+        """Test "reset" should turn off all bit flags."""
         TestBitFlag.f.set("a")
         TestBitFlag.f.set("b")
         TestBitFlag.f.set("c")
@@ -51,7 +50,7 @@ class TestBitFlag(unittest.TestCase):
         self.assertEqual(TestBitFlag.f.has("c"), False)
 
     def test_flip_should_invert_all_bit_flags(self):
-        """Test "set" should turn on bit flag."""
+        """Test "flip" should invert all bit flags."""
         TestBitFlag.f.set("a")
         TestBitFlag.f.unset("b")
         TestBitFlag.f.set("c")
