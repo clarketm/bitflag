@@ -13,8 +13,37 @@ class BitFlag:
 
     def __init__(self, *options: str):
         self.flags = 0
+        self._options = options
         for i, v in enumerate(options):
             setattr(self, v, 2 ** i)
+
+    def __repr__(self):
+        return "BitFlag( " + f"flags=>{self.flags:0{len(self._options)}b}, " + ", ".join(f"{k}=>{v}" for k, v in self.items()) + " )"
+
+    def __str__(self):
+        return f"flags=>{self.flags:0{len(self._options)}b}, " + ", ".join(f"{k}=>{v}" for k, v in self.items())
+
+    def __int__(self):
+        return self.flags
+
+    def __len__(self):
+        return len(self._options)
+
+    def __getitem__(self, item):
+        try:
+            index = int(item)
+            return self._options[index]
+        except ValueError:
+            return self.has(item)
+
+    def keys(self):
+        return self._options
+
+    def values(self):
+        return [self.has(f) for f in self._options]
+
+    def items(self):
+        return [(f, self.has(f)) for f in self._options]
 
     @property
     def flags(self) -> int:
@@ -89,3 +118,10 @@ class BitFlag:
         """
         self.flags = ~(self.flags)
         return self.flags
+
+
+if __name__ == '__main__':
+    bf = BitFlag("a", "b", "c")
+
+    print(list(bf))
+    print(dict(bf))
