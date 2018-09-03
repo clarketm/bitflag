@@ -11,6 +11,40 @@ class TestBitFlag(unittest.TestCase):
     def setUp(cls):
         cls.f = BitFlag("a", "b", "c")
 
+    def test_should_be_iterable(self):
+        for _ in TestBitFlag.f:
+            pass
+
+    def test_should_have_correct_len(self):
+        self.assertEqual(len(TestBitFlag.f), 3)
+
+    def test_should_be_iterable_keys(self):
+        actual = []
+        for k in TestBitFlag.f.keys():
+            actual.append(k)
+        self.assertEqual(actual, ["a", "b", "c"])
+
+    def test_should_be_iterable_values(self):
+        actual = []
+        for v in TestBitFlag.f.values():
+            actual.append(v)
+        self.assertEqual(actual, [False, False, False])
+
+    def test_should_be_iterable_items(self):
+        actual = []
+        for kv in TestBitFlag.f.items():
+            actual.append(kv)
+        self.assertEqual(actual, [("a", False), ("b", False), ("c", False)])
+
+    def test_should_print_str_representation(self):
+        self.assertEqual(str(TestBitFlag.f), "flags=>000, a=>False, b=>False, c=>False")
+
+    def test_should_print_repr_representation(self):
+        self.assertEqual(repr(TestBitFlag.f), "BitFlag( flags=>000, a=>False, b=>False, c=>False )")
+
+    def test_should_print_int_representation(self):
+        self.assertEqual(int(TestBitFlag.f), 0)
+
     def test_has_should_return_false_for_initialized_bit_flags(self):
         """Test "has" should return false for initialized bit flags."""
         self.assertEqual(TestBitFlag.f.has("a"), False)
