@@ -40,6 +40,27 @@ bf.reset()
 # flip – Flip all bit flags.
 bf.flip()
 
+# keys - iterate over flag keys.
+for k in bf.keys():
+    print(k)
+
+# values - iterate over flag values.
+for v in bf.values():
+    print(v)
+
+# items - iterate over flag keys and values.
+for k,v in bf.items():
+    print(k, v)
+
+# str - informal string representation.
+str(bf)
+
+# repr - formal string representation.
+repr(bf)
+
+# int - integer representation.
+int(bf)
+
 ```
 
 ## License
