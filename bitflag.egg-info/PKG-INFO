@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: bitflag
-Version: 0.1.1
+Version: 1.0.0
 Summary: A bit flag class for python
 Home-page: https://github.com/clarketm/bitflag
 Author: Travis Clarke
