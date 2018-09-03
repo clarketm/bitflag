@@ -118,10 +118,3 @@ class BitFlag:
         """
         self.flags = ~(self.flags)
         return self.flags
-
-
-if __name__ == '__main__':
-    bf = BitFlag("a", "b", "c")
-
-    print(list(bf))
-    print(dict(bf))
