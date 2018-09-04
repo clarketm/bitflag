@@ -37,13 +37,21 @@ class TestBitFlag(unittest.TestCase):
         self.assertEqual(actual, [("a", False), ("b", False), ("c", False)])
 
     def test_should_print_str_representation(self):
-        self.assertEqual(str(TestBitFlag.f), "flags=>000, a=>False, b=>False, c=>False")
+        self.assertEqual(str(TestBitFlag.f), "flags=000, a=False, b=False, c=False")
 
     def test_should_print_repr_representation(self):
-        self.assertEqual(repr(TestBitFlag.f), "BitFlag( flags=>000, a=>False, b=>False, c=>False )")
+        self.assertEqual(repr(TestBitFlag.f), "BitFlag(flags=000, a=False, b=False, c=False)")
 
     def test_should_print_int_representation(self):
         self.assertEqual(int(TestBitFlag.f), 0)
+
+    def test_should_be_coverted_to_list(self):
+        self.assertIsNotNone(list(TestBitFlag.f))
+        self.assertTrue(isinstance(list(TestBitFlag.f), list))
+
+    def test_should_be_coverted_to_dict(self):
+        self.assertIsNotNone(dict(TestBitFlag.f))
+        self.assertTrue(isinstance(dict(TestBitFlag.f), dict))
 
     def test_has_should_return_false_for_initialized_bit_flags(self):
         """Test "has" should return false for initialized bit flags."""

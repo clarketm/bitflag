@@ -18,10 +18,10 @@ class BitFlag:
             setattr(self, v, 2 ** i)
 
     def __repr__(self):
-        return "BitFlag( " + f"flags=>{self.flags:0{len(self._options)}b}, " + ", ".join(f"{k}=>{v}" for k, v in self.items()) + " )"
+        return "BitFlag(" + f"flags={self.flags:0{len(self._options)}b}, " + ", ".join(f"{k}={v}" for k, v in self.items()) + ")"
 
     def __str__(self):
-        return f"flags=>{self.flags:0{len(self._options)}b}, " + ", ".join(f"{k}=>{v}" for k, v in self.items())
+        return f"flags={self.flags:0{len(self._options)}b}, " + ", ".join(f"{k}={v}" for k, v in self.items())
 
     def __int__(self):
         return self.flags
