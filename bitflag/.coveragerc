@@ -1,0 +1,4 @@
+[run]
+include =
+    bitflag/BitFlag.py
+    */BitFlag.py
