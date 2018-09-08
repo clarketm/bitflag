@@ -1,7 +1,7 @@
 """BitFlag module"""
 
 import unittest
-from bitflag.BitFlag import BitFlag
+from bitflag import BitFlag
 
 
 class TestBitFlag(unittest.TestCase):
