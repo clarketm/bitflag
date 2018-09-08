@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bitflag",
-    version="1.0.1",
+    version="2.0.0",
     author="Travis Clarke",
     author_email="travis.m.clarke@gmail.com",
     description="A bit flag class for python",
