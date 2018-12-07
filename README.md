@@ -1,6 +1,7 @@
 # [BitFlag](https://pypi.org/project/bitflag/)
 
 [![PyPi release](https://img.shields.io/pypi/v/bitflag.svg)](https://pypi.org/project/bitflag/)
+[![Downloads](https://pepy.tech/badge/bitflag)](https://pepy.tech/project/bitflag)
 
 A simple bit flag class for Python 🐍.
 
